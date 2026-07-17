@@ -27,6 +27,7 @@
       </a>
       <nav class="nav" aria-label="Main navigation">
         <a href="#services">Services</a>
+        <a href="#quote">Free quote</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -41,7 +42,7 @@
           </p>
           <div class="hero-actions" aria-label="Contact actions">
             <a class="button primary" href="tel:+447446819173" data-track="call-main">
-              <span aria-hidden="true">☎</span>
+              <span aria-hidden="true">Call</span>
               Call now
             </a>
             <a
@@ -51,29 +52,32 @@
               rel="noopener"
               data-track="whatsapp-main"
             >
-              <span aria-hidden="true">◎</span>
+              <span aria-hidden="true">WA</span>
               WhatsApp
             </a>
           </div>
         </div>
         <figure class="flyer-panel">
-          <img src="assets/aron-elite-projects-flyer.jpg" alt="Aron Elite Projects service flyer showing renovation, painting, carpentry, and contact details.">
+          <picture>
+            <source srcset="assets/aron-elite-projects-flyer.webp" type="image/webp">
+            <img src="assets/aron-elite-projects-flyer.jpg" alt="Aron Elite Projects service flyer showing renovation, painting, carpentry, and contact details.">
+          </picture>
         </figure>
       </section>
 
       <section class="trust-band" aria-label="Why choose Aron Elite Projects">
         <div>
-          <span class="icon" aria-hidden="true">✓</span>
+          <span class="icon" aria-hidden="true">OK</span>
           <strong>High standards</strong>
           <p>Attention to detail in every project.</p>
         </div>
         <div>
-          <span class="icon" aria-hidden="true">●</span>
+          <span class="icon" aria-hidden="true">ON</span>
           <strong>Reliable & trusted</strong>
           <p>On time, on budget, every time.</p>
         </div>
         <div>
-          <span class="icon" aria-hidden="true">◆</span>
+          <span class="icon" aria-hidden="true">ALL</span>
           <strong>All-in-one service</strong>
           <p>From small fixes to full renovations.</p>
         </div>
@@ -86,31 +90,73 @@
         </div>
         <div class="service-grid">
           <article>
-            <span aria-hidden="true">▰</span>
+            <span aria-hidden="true">P</span>
             <h3>Painting</h3>
             <p>Interior paint work with clean preparation and neat finishing.</p>
           </article>
           <article>
-            <span aria-hidden="true">⌂</span>
+            <span aria-hidden="true">H</span>
             <h3>Home improvement</h3>
             <p>Practical upgrades, repairs, and improvements for daily living.</p>
           </article>
           <article>
-            <span aria-hidden="true">⌕</span>
+            <span aria-hidden="true">M</span>
             <h3>Home maintenance</h3>
             <p>Fixes, adjustments, and maintenance tasks completed properly.</p>
           </article>
           <article>
-            <span aria-hidden="true">▱</span>
+            <span aria-hidden="true">C</span>
             <h3>Carpentry</h3>
             <p>Woodwork, repairs, fittings, and custom project support.</p>
           </article>
           <article>
-            <span aria-hidden="true">⌂</span>
+            <span aria-hidden="true">R</span>
             <h3>Full renovation</h3>
             <p>Coordinated renovation work for larger home projects.</p>
           </article>
         </div>
+      </section>
+
+      <section id="quote" class="quote-section" aria-labelledby="quote-title">
+        <div class="quote-copy">
+          <p class="eyebrow">Fast quote</p>
+          <h2 id="quote-title">Send the project details in one message</h2>
+          <p>
+            Fill in the essentials and the site will open WhatsApp with a ready message to Aron Elite Projects.
+          </p>
+        </div>
+        <form class="quote-form" id="quote-form">
+          <label>
+            <span>Name</span>
+            <input name="name" autocomplete="name" placeholder="Your name">
+          </label>
+          <label>
+            <span>Phone</span>
+            <input name="phone" autocomplete="tel" inputmode="tel" placeholder="+44...">
+          </label>
+          <label>
+            <span>Service</span>
+            <select name="service">
+              <option value="Painting">Painting</option>
+              <option value="Home improvement">Home improvement</option>
+              <option value="Home maintenance">Home maintenance</option>
+              <option value="Carpentry">Carpentry</option>
+              <option value="Full renovation">Full renovation</option>
+            </select>
+          </label>
+          <label>
+            <span>Location</span>
+            <input name="location" autocomplete="address-level2" placeholder="City / area">
+          </label>
+          <label class="full">
+            <span>Project details</span>
+            <textarea name="details" rows="4" placeholder="Tell us what needs to be done"></textarea>
+          </label>
+          <button class="button whatsapp full" type="submit" data-track="quote-whatsapp">
+            <span aria-hidden="true">WA</span>
+            Send quote request on WhatsApp
+          </button>
+        </form>
       </section>
 
       <section id="contact" class="contact" aria-labelledby="contact-title">
@@ -121,7 +167,7 @@
         </div>
         <div class="contact-card" aria-label="Contact details">
           <a href="tel:+447446819173" data-track="call-contact">
-            <span aria-hidden="true">☎</span>
+            <span aria-hidden="true">Call</span>
             <span>
               <small>Call now</small>
               +44 7446 819173
@@ -133,7 +179,7 @@
             rel="noopener"
             data-track="whatsapp-contact"
           >
-            <span aria-hidden="true">◎</span>
+            <span aria-hidden="true">WA</span>
             <span>
               <small>WhatsApp</small>
               +972 50 865 8498
@@ -150,8 +196,32 @@
       </section>
     </main>
 
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/972508658498?text=Hi%20Aron%20Elite%20Projects%2C%20I%20would%20like%20to%20get%20a%20free%20quote."
+      target="_blank"
+      rel="noopener"
+      aria-label="Open WhatsApp chat with Aron Elite Projects"
+      data-track="whatsapp-floating"
+    >
+      WA
+    </a>
+
+    <div class="mobile-contact-bar" aria-label="Quick contact">
+      <a href="tel:+447446819173" data-track="mobile-call">Call</a>
+      <a
+        href="https://wa.me/972508658498?text=Hi%20Aron%20Elite%20Projects%2C%20I%20would%20like%20to%20get%20a%20free%20quote."
+        target="_blank"
+        rel="noopener"
+        data-track="mobile-whatsapp"
+      >
+        WhatsApp
+      </a>
+      <a href="mailto:info@aharonep.co.uk?subject=Free%20quote%20request&body=Hi%20Aron%20Elite%20Projects%2C%0A%0AI%20would%20like%20to%20get%20a%20free%20quote%20for%3A%0A%0AName%3A%0ALocation%3A%0APhone%3A%0AProject%20details%3A%0A" data-track="mobile-email">Email</a>
+    </div>
+
     <footer>
-      <p>© <span id="year"></span> Aron Elite Projects. Quality work. Lasting results.</p>
+      <p>&copy; <span id="year"></span> Aron Elite Projects. Quality work. Lasting results.</p>
     </footer>
 
     <script src="script.js"></script>
