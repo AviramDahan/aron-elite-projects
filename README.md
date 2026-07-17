@@ -2,6 +2,8 @@
 
 Static landing page for Aron Elite Projects.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/AviramDahan/aron-elite-projects)
+
 ## Contact Links
 
 - Phone: `tel:+447446819173`
