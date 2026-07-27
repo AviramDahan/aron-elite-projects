@@ -6,6 +6,49 @@ document.querySelectorAll("[data-track]").forEach((link) => {
   });
 });
 
+const filterButtons = document.querySelectorAll("[data-filter]");
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    filterButtons.forEach((item) => item.classList.toggle("active", item === button));
+    galleryItems.forEach((item) => {
+      const show = filter === "all" || item.dataset.category === filter;
+      item.classList.toggle("hidden", !show);
+    });
+  });
+});
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = lightbox?.querySelector("img");
+const lightboxCaption = lightbox?.querySelector("p");
+const lightboxClose = lightbox?.querySelector(".lightbox-close");
+
+galleryItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    if (!lightbox || !lightboxImage || !lightboxCaption) return;
+
+    const image = item.querySelector("img");
+    lightboxImage.src = item.dataset.full || image?.src || "";
+    lightboxImage.alt = image?.alt || "";
+    lightboxCaption.textContent = item.querySelector("span")?.textContent || "";
+    document.body.classList.add("lightbox-open");
+    lightbox.showModal();
+  });
+});
+
+lightboxClose?.addEventListener("click", () => lightbox?.close());
+lightbox?.addEventListener("close", () => {
+  document.body.classList.remove("lightbox-open");
+  if (lightboxImage) lightboxImage.src = "";
+});
+
+lightbox?.addEventListener("click", (event) => {
+  if (event.target === lightbox) lightbox.close();
+});
+
 const quoteForm = document.getElementById("quote-form");
 
 if (quoteForm) {

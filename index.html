@@ -3,17 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aron Elite Projects | Home Improvement & Renovation</title>
+    <title>Aron Elite Projects | Renovation, Carpentry, Decking & Painting</title>
     <meta
       name="description"
-      content="Aron Elite Projects provides professional painting, carpentry, maintenance, home improvement, and full renovation services."
+      content="Aron Elite Projects delivers home renovation, painting, wall panels, carpentry, decking, pergolas, bathrooms, kitchens, and bespoke woodwork."
     >
-    <meta name="theme-color" content="#08284a">
+    <meta name="theme-color" content="#102238">
     <meta property="og:title" content="Aron Elite Projects">
-    <meta property="og:description" content="Quality work. Lasting results. Get a free quote today.">
-    <meta property="og:image" content="assets/aron-elite-projects-flyer.jpg">
+    <meta property="og:description" content="Renovation, carpentry, decking, painting, and bespoke woodwork. Get a free quote today.">
+    <meta property="og:image" content="assets/portfolio/hero-lounge.webp">
     <meta property="og:type" content="website">
     <link rel="icon" href="assets/aron-elite-projects-flyer.jpg">
+    <link rel="preload" href="assets/portfolio/hero-lounge.webp" as="image">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -26,6 +27,7 @@
         </span>
       </a>
       <nav class="nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
         <a href="#services">Services</a>
         <a href="#quote">Free quote</a>
         <a href="#contact">Contact</a>
@@ -33,18 +35,16 @@
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Professional home improvement</p>
-          <h1>Built on quality</h1>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Home improvement and renovation</p>
+          <h1 id="hero-title">Aron Elite Projects</h1>
           <p class="lead">
-            Reliable renovation, painting, carpentry, and maintenance services for homes and projects that need careful work and lasting results.
+            Complete home renovation, bespoke carpentry, wall panels, painting, decking, pergolas, bathrooms, kitchens, lighting, and fitted interiors.
           </p>
           <div class="hero-actions" aria-label="Contact actions">
-            <a class="button primary" href="tel:+447446819173" data-track="call-main">
-              <span aria-hidden="true">Call</span>
-              Call now
-            </a>
+            <a class="button primary" href="tel:+447446819173" data-track="call-main">Call now</a>
             <a
               class="button whatsapp"
               href="https://wa.me/972508658498?text=Hi%20Aron%20Elite%20Projects%2C%20I%20would%20like%20to%20get%20a%20free%20quote."
@@ -52,67 +52,260 @@
               rel="noopener"
               data-track="whatsapp-main"
             >
-              <span aria-hidden="true">WA</span>
-              WhatsApp
+              WhatsApp quote
             </a>
           </div>
+          <dl class="hero-stats" aria-label="Project capabilities">
+            <div>
+              <dt>5</dt>
+              <dd>Core services</dd>
+            </div>
+            <div>
+              <dt>70+</dt>
+              <dd>Portfolio files reviewed</dd>
+            </div>
+            <div>
+              <dt>1</dt>
+              <dd>Point of contact</dd>
+            </div>
+          </dl>
         </div>
-        <figure class="flyer-panel">
-          <picture>
-            <source srcset="assets/aron-elite-projects-flyer.webp" type="image/webp">
-            <img src="assets/aron-elite-projects-flyer.jpg" alt="Aron Elite Projects service flyer showing renovation, painting, carpentry, and contact details.">
-          </picture>
-        </figure>
       </section>
 
       <section class="trust-band" aria-label="Why choose Aron Elite Projects">
         <div>
-          <span class="icon" aria-hidden="true">OK</span>
+          <span class="icon" aria-hidden="true">01</span>
           <strong>High standards</strong>
-          <p>Attention to detail in every project.</p>
+          <p>Detailed finish work across walls, flooring, fittings, and joinery.</p>
         </div>
         <div>
-          <span class="icon" aria-hidden="true">ON</span>
+          <span class="icon" aria-hidden="true">02</span>
           <strong>Reliable & trusted</strong>
-          <p>On time, on budget, every time.</p>
+          <p>Clear communication, direct contact, and practical project planning.</p>
         </div>
         <div>
-          <span class="icon" aria-hidden="true">ALL</span>
+          <span class="icon" aria-hidden="true">03</span>
           <strong>All-in-one service</strong>
-          <p>From small fixes to full renovations.</p>
+          <p>From small fixes to multi-room renovation and outdoor builds.</p>
+        </div>
+      </section>
+
+      <section id="work" class="featured-work" aria-labelledby="work-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2 id="work-title">A portfolio built around real finished spaces</h2>
+          </div>
+          <p>
+            The work is grouped by what customers actually look for: finish quality, renovation scope, outdoor structures, and bespoke woodwork.
+          </p>
+        </div>
+
+        <div class="showcase-grid">
+          <article class="showcase-large">
+            <img src="assets/portfolio/feature-wall-panels.webp" alt="Finished lounge with dark wall panels, recessed lighting, and detailed trim work.">
+            <div>
+              <p class="eyebrow">Wall panels and painting</p>
+              <h3>Feature walls, lighting details, and clean paint finishes</h3>
+            </div>
+          </article>
+          <article>
+            <img src="assets/portfolio/feature-renovation.webp" alt="Renovated kitchen with fitted dark cabinets and bright flooring.">
+            <h3>Interior renovation</h3>
+            <p>Kitchens, rooms, flooring, lighting, doors, and fitted storage.</p>
+          </article>
+          <article>
+            <img src="assets/portfolio/feature-decking.webp" alt="Long timber deck installed along an outdoor path.">
+            <h3>Decking and pergolas</h3>
+            <p>Outdoor wood structures, decking, pergolas, frames, and railings.</p>
+          </article>
+          <article>
+            <img src="assets/portfolio/feature-furniture.webp" alt="Bespoke fitted bookshelf and storage unit.">
+            <h3>Bespoke woodwork</h3>
+            <p>Custom shelving, benches, cabinets, tables, and practical fitted pieces.</p>
+          </article>
         </div>
       </section>
 
       <section id="services" class="services" aria-labelledby="services-title">
         <div class="section-heading">
-          <p class="eyebrow">Our services</p>
-          <h2 id="services-title">Home improvement handled end to end</h2>
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title">Renovation work handled end to end</h2>
         </div>
         <div class="service-grid">
           <article>
-            <span aria-hidden="true">P</span>
-            <h3>Painting</h3>
-            <p>Interior paint work with clean preparation and neat finishing.</p>
+            <span aria-hidden="true">PT</span>
+            <h3>Painting and wall panels</h3>
+            <p>Interior painting, accent walls, decorative panels, trim, and final finishing.</p>
           </article>
           <article>
-            <span aria-hidden="true">H</span>
-            <h3>Home improvement</h3>
-            <p>Practical upgrades, repairs, and improvements for daily living.</p>
+            <span aria-hidden="true">RN</span>
+            <h3>Full home renovation</h3>
+            <p>Plumbing, electrical, gas infrastructure, kitchens, bathrooms, flooring, doors, and lighting.</p>
           </article>
           <article>
-            <span aria-hidden="true">M</span>
-            <h3>Home maintenance</h3>
-            <p>Fixes, adjustments, and maintenance tasks completed properly.</p>
+            <span aria-hidden="true">DK</span>
+            <h3>Decking and pergolas</h3>
+            <p>Garden decks, pergolas, timber frames, steps, railings, and outdoor improvements.</p>
           </article>
           <article>
-            <span aria-hidden="true">C</span>
-            <h3>Carpentry</h3>
-            <p>Woodwork, repairs, fittings, and custom project support.</p>
+            <span aria-hidden="true">ST</span>
+            <h3>Wood studio builds</h3>
+            <p>Garden rooms and timber studios, from base preparation to finished exterior cladding.</p>
           </article>
           <article>
-            <span aria-hidden="true">R</span>
-            <h3>Full renovation</h3>
-            <p>Coordinated renovation work for larger home projects.</p>
+            <span aria-hidden="true">WD</span>
+            <h3>Bespoke wood products</h3>
+            <p>Made-to-measure wood furniture, shelving, benches, storage, tables, and fitted units.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="portfolio-gallery" aria-labelledby="gallery-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Project gallery</p>
+            <h2 id="gallery-title">Browse by type of work</h2>
+          </div>
+          <div class="filter-group" aria-label="Filter gallery">
+            <button type="button" class="filter-button active" data-filter="all">All</button>
+            <button type="button" class="filter-button" data-filter="paint">Painting</button>
+            <button type="button" class="filter-button" data-filter="renovation">Renovation</button>
+            <button type="button" class="filter-button" data-filter="decking">Decking</button>
+            <button type="button" class="filter-button" data-filter="wood">Woodwork</button>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-item wide" data-category="paint" data-full="assets/portfolio/paint-lounge-wide.webp" type="button">
+            <img src="assets/portfolio/paint-lounge-wide.webp" alt="Wide finished lounge with painted wall panels and recessed lighting.">
+            <span>Wall panels and lounge finish</span>
+          </button>
+          <button class="gallery-item" data-category="paint" data-full="assets/portfolio/paint-room-green.webp" type="button">
+            <img src="assets/portfolio/paint-room-green.webp" alt="Freshly painted green room with white doors and trim.">
+            <span>Interior painting</span>
+          </button>
+          <button class="gallery-item" data-category="paint" data-full="assets/portfolio/paint-blue-wall.webp" type="button">
+            <img src="assets/portfolio/paint-blue-wall.webp" alt="Blue feature wall with clean white trim.">
+            <span>Feature wall</span>
+          </button>
+          <button class="gallery-item" data-category="paint" data-full="assets/portfolio/paint-dining-room.webp" type="button">
+            <img src="assets/portfolio/paint-dining-room.webp" alt="Dark blue dining room with chandelier and wall panels.">
+            <span>Decorative wall panels</span>
+          </button>
+          <button class="gallery-item" data-category="paint" data-full="assets/portfolio/paint-hallway.webp" type="button">
+            <img src="assets/portfolio/paint-hallway.webp" alt="Finished hallway with wall panel details.">
+            <span>Hallway finishing</span>
+          </button>
+          <button class="gallery-item" data-category="paint" data-full="assets/portfolio/paint-lounge-lighting.webp" type="button">
+            <img src="assets/portfolio/paint-lounge-lighting.webp" alt="Lounge with spotlights, panels, and painted trim.">
+            <span>Lighting and finish</span>
+          </button>
+
+          <button class="gallery-item" data-category="renovation" data-full="assets/portfolio/renovation-kitchen.webp" type="button">
+            <img src="assets/portfolio/renovation-kitchen.webp" alt="Renovated kitchen with dark cabinets.">
+            <span>Kitchen renovation</span>
+          </button>
+          <button class="gallery-item" data-category="renovation" data-full="assets/portfolio/renovation-bathroom-grey.webp" type="button">
+            <img src="assets/portfolio/renovation-bathroom-grey.webp" alt="Bathroom renovation with grey tiles and new fixtures.">
+            <span>Bathroom renovation</span>
+          </button>
+          <button class="gallery-item" data-category="renovation" data-full="assets/portfolio/renovation-bath-suite.webp" type="button">
+            <img src="assets/portfolio/renovation-bath-suite.webp" alt="Finished bathroom with bath, vanity, and tiled wall.">
+            <span>Bath and fittings</span>
+          </button>
+          <button class="gallery-item" data-category="renovation" data-full="assets/portfolio/renovation-bedroom.webp" type="button">
+            <img src="assets/portfolio/renovation-bedroom.webp" alt="Renovated bedroom with flooring and fitted blind.">
+            <span>Bedroom renovation</span>
+          </button>
+          <button class="gallery-item" data-category="renovation" data-full="assets/portfolio/renovation-wardrobes.webp" type="button">
+            <img src="assets/portfolio/renovation-wardrobes.webp" alt="White fitted wardrobes in a renovated room.">
+            <span>Fitted wardrobes</span>
+          </button>
+
+          <button class="gallery-item wide" data-category="decking" data-full="assets/portfolio/deck-railing.webp" type="button">
+            <img src="assets/portfolio/deck-railing.webp" alt="Outdoor timber railings and steps.">
+            <span>Timber railing and steps</span>
+          </button>
+          <button class="gallery-item" data-category="decking" data-full="assets/portfolio/deck-pergola-front.webp" type="button">
+            <img src="assets/portfolio/deck-pergola-front.webp" alt="Garden pergola and deck build in progress.">
+            <span>Garden pergola</span>
+          </button>
+          <button class="gallery-item" data-category="decking" data-full="assets/portfolio/deck-walkway.webp" type="button">
+            <img src="assets/portfolio/deck-walkway.webp" alt="Outdoor timber walkway deck.">
+            <span>Deck walkway</span>
+          </button>
+          <button class="gallery-item" data-category="decking" data-full="assets/portfolio/deck-frame.webp" type="button">
+            <img src="assets/portfolio/deck-frame.webp" alt="Timber deck frame before boards are installed.">
+            <span>Deck frame</span>
+          </button>
+          <button class="gallery-item" data-category="decking" data-full="assets/portfolio/deck-pergola-side.webp" type="button">
+            <img src="assets/portfolio/deck-pergola-side.webp" alt="Side view of timber pergola.">
+            <span>Pergola structure</span>
+          </button>
+
+          <button class="gallery-item" data-category="wood" data-full="assets/portfolio/studio-frame.webp" type="button">
+            <img src="assets/portfolio/studio-frame.webp" alt="Insulated timber studio frame.">
+            <span>Wood studio frame</span>
+          </button>
+          <button class="gallery-item wide" data-category="wood" data-full="assets/portfolio/studio-exterior.webp" type="button">
+            <img src="assets/portfolio/studio-exterior.webp" alt="Finished timber garden studio exterior.">
+            <span>Garden studio exterior</span>
+          </button>
+          <button class="gallery-item" data-category="wood" data-full="assets/portfolio/studio-finished.webp" type="button">
+            <img src="assets/portfolio/studio-finished.webp" alt="Finished timber studio building.">
+            <span>Finished studio</span>
+          </button>
+          <button class="gallery-item" data-category="wood" data-full="assets/portfolio/wood-cabinet.webp" type="button">
+            <img src="assets/portfolio/wood-cabinet.webp" alt="Custom wood cabinet with storage.">
+            <span>Custom cabinet</span>
+          </button>
+          <button class="gallery-item" data-category="wood" data-full="assets/portfolio/wood-bench.webp" type="button">
+            <img src="assets/portfolio/wood-bench.webp" alt="Custom timber outdoor bench.">
+            <span>Outdoor bench</span>
+          </button>
+          <button class="gallery-item" data-category="wood" data-full="assets/portfolio/wood-shelf.webp" type="button">
+            <img src="assets/portfolio/wood-shelf.webp" alt="Custom wine shelf and display unit.">
+            <span>Fitted shelf unit</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="video-section" aria-labelledby="video-title">
+        <div class="section-heading">
+          <p class="eyebrow">On site</p>
+          <h2 id="video-title">Short project videos</h2>
+        </div>
+        <div class="video-grid">
+          <video controls preload="metadata" poster="assets/portfolio/studio-exterior.webp">
+            <source src="assets/portfolio/vid-20260728-wa0034.mp4" type="video/mp4">
+          </video>
+          <video controls preload="metadata" poster="assets/portfolio/studio-frame.webp">
+            <source src="assets/portfolio/vid-20260728-wa0012.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+
+      <section class="process" aria-labelledby="process-title">
+        <div class="section-heading">
+          <p class="eyebrow">How it works</p>
+          <h2 id="process-title">A simple route from idea to finished work</h2>
+        </div>
+        <div class="process-grid">
+          <article>
+            <span>1</span>
+            <h3>Share the job</h3>
+            <p>Send photos, location, measurements, and the result you want.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Get a clear quote</h3>
+            <p>Scope, materials, timing, and practical options are clarified before work starts.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Complete the work</h3>
+            <p>The project is handled with attention to finish, cleanliness, and long-term use.</p>
           </article>
         </div>
       </section>
@@ -120,7 +313,7 @@
       <section id="quote" class="quote-section" aria-labelledby="quote-title">
         <div class="quote-copy">
           <p class="eyebrow">Fast quote</p>
-          <h2 id="quote-title">Send the project details in one message</h2>
+          <h2 id="quote-title">Send the project details in one WhatsApp message</h2>
           <p>
             Fill in the essentials and the site will open WhatsApp with a ready message to Aron Elite Projects.
           </p>
@@ -137,11 +330,12 @@
           <label>
             <span>Service</span>
             <select name="service">
-              <option value="Painting">Painting</option>
-              <option value="Home improvement">Home improvement</option>
+              <option value="Full home renovation">Full home renovation</option>
+              <option value="Painting and wall panels">Painting and wall panels</option>
+              <option value="Decking or pergola">Decking or pergola</option>
+              <option value="Wood studio build">Wood studio build</option>
+              <option value="Bespoke woodwork">Bespoke woodwork</option>
               <option value="Home maintenance">Home maintenance</option>
-              <option value="Carpentry">Carpentry</option>
-              <option value="Full renovation">Full renovation</option>
             </select>
           </label>
           <label>
@@ -153,7 +347,6 @@
             <textarea name="details" rows="4" placeholder="Tell us what needs to be done"></textarea>
           </label>
           <button class="button whatsapp full" type="submit" data-track="quote-whatsapp">
-            <span aria-hidden="true">WA</span>
             Send quote request on WhatsApp
           </button>
         </form>
@@ -162,8 +355,8 @@
       <section id="contact" class="contact" aria-labelledby="contact-title">
         <div>
           <p class="eyebrow">Get in touch</p>
-          <h2 id="contact-title">Get a free quote today</h2>
-          <p>Contact Aron Amar directly and describe the work you need. Calls, WhatsApp, and email are all ready to use.</p>
+          <h2 id="contact-title">Ready to price your project</h2>
+          <p>Contact Aron Amar directly. Calls, WhatsApp, and email are all ready to use.</p>
         </div>
         <div class="contact-card" aria-label="Contact details">
           <a href="tel:+447446819173" data-track="call-contact">
@@ -195,6 +388,12 @@
         </div>
       </section>
     </main>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Project image preview">
+      <button class="lightbox-close" type="button" aria-label="Close image preview">Close</button>
+      <img src="" alt="">
+      <p></p>
+    </dialog>
 
     <a
       class="floating-whatsapp"
