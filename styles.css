@@ -469,15 +469,26 @@ h3 {
   background: var(--navy);
 }
 
+.gallery-shell {
+  position: relative;
+}
+
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-auto-flow: dense;
-  gap: 12px;
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 4px 18px;
+  scroll-behavior: smooth;
+  scroll-padding-inline: 4px;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--navy) rgba(16, 34, 56, 0.12);
+  scrollbar-width: thin;
 }
 
 .gallery-item {
   position: relative;
+  flex: 0 0 clamp(260px, 27vw, 390px);
   min-height: 250px;
   padding: 0;
   overflow: hidden;
@@ -485,10 +496,11 @@ h3 {
   background: #111;
   border: 0;
   border-radius: 8px;
+  scroll-snap-align: start;
 }
 
 .gallery-item.wide {
-  grid-column: span 2;
+  flex-basis: clamp(360px, 43vw, 620px);
 }
 
 .gallery-item.hidden {
@@ -523,6 +535,45 @@ h3 {
 .gallery-item:hover img,
 .gallery-item:focus-visible img {
   transform: scale(1.035);
+}
+
+.slider-control {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: grid;
+  width: 48px;
+  height: 62px;
+  place-items: center;
+  color: var(--white);
+  background: rgba(16, 34, 56, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1;
+  transform: translateY(-50%);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.slider-control.prev {
+  left: 10px;
+}
+
+.slider-control.next {
+  right: 10px;
+}
+
+.slider-control:hover,
+.slider-control:focus-visible {
+  transform: translateY(-50%) scale(1.04);
+}
+
+.slider-control:disabled {
+  cursor: default;
+  opacity: 0.34;
+  transform: translateY(-50%);
 }
 
 .video-section {
@@ -756,8 +807,7 @@ footer p {
 }
 
 @media (max-width: 1120px) {
-  .service-grid,
-  .gallery-grid {
+  .service-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -839,7 +889,6 @@ footer p {
   .trust-band,
   .showcase-grid,
   .service-grid,
-  .gallery-grid,
   .process-grid,
   .quote-form {
     grid-template-columns: 1fr;
@@ -850,12 +899,22 @@ footer p {
   }
 
   .gallery-item.wide {
-    grid-column: span 1;
+    flex-basis: 84vw;
   }
 
   .gallery-item,
   .gallery-item img {
     min-height: 310px;
+  }
+
+  .gallery-item {
+    flex-basis: 78vw;
+  }
+
+  .slider-control {
+    width: 42px;
+    height: 54px;
+    font-size: 32px;
   }
 
   .trust-band div,

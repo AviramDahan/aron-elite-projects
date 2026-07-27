@@ -8,6 +8,26 @@ document.querySelectorAll("[data-track]").forEach((link) => {
 
 const filterButtons = document.querySelectorAll("[data-filter]");
 const galleryItems = document.querySelectorAll(".gallery-item");
+const gallerySlider = document.querySelector(".gallery-grid");
+const galleryPrev = document.querySelector("[data-gallery-prev]");
+const galleryNext = document.querySelector("[data-gallery-next]");
+
+const updateSliderControls = () => {
+  if (!gallerySlider || !galleryPrev || !galleryNext) return;
+
+  const maxScroll = gallerySlider.scrollWidth - gallerySlider.clientWidth;
+  galleryPrev.disabled = gallerySlider.scrollLeft <= 4;
+  galleryNext.disabled = gallerySlider.scrollLeft >= maxScroll - 4;
+};
+
+const scrollGallery = (direction) => {
+  if (!gallerySlider) return;
+
+  gallerySlider.scrollBy({
+    left: direction * Math.round(gallerySlider.clientWidth * 0.82),
+    behavior: "smooth",
+  });
+};
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -18,8 +38,17 @@ filterButtons.forEach((button) => {
       const show = filter === "all" || item.dataset.category === filter;
       item.classList.toggle("hidden", !show);
     });
+
+    if (gallerySlider) gallerySlider.scrollTo({ left: 0, behavior: "smooth" });
+    requestAnimationFrame(updateSliderControls);
   });
 });
+
+galleryPrev?.addEventListener("click", () => scrollGallery(-1));
+galleryNext?.addEventListener("click", () => scrollGallery(1));
+gallerySlider?.addEventListener("scroll", updateSliderControls);
+window.addEventListener("resize", updateSliderControls);
+updateSliderControls();
 
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = lightbox?.querySelector("img");
