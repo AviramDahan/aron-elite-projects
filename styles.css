@@ -2,13 +2,14 @@
   --navy: #102238;
   --navy-2: #183856;
   --ink: #18202b;
-  --muted: #657282;
+  --muted: #4f5d6a;
   --line: #d8d2c6;
   --paper: #f5f2ec;
   --soft: #ebeef0;
   --white: #ffffff;
-  --green: #16884f;
-  --timber: #a87443;
+  --green: #137f49;
+  --timber: #95582b;
+  --timber-light: #d49a62;
   --shadow: 0 22px 60px rgba(16, 34, 56, 0.18);
 }
 
@@ -112,6 +113,9 @@ video {
 }
 
 .nav a {
+  display: grid;
+  min-height: 44px;
+  place-items: center;
   padding: 10px 12px;
   border-radius: 8px;
   color: var(--navy);
@@ -159,6 +163,10 @@ video {
   width: 100%;
   max-width: 860px;
   min-width: 0;
+}
+
+.hero .eyebrow {
+  color: var(--timber-light);
 }
 
 .eyebrow {
@@ -515,6 +523,7 @@ h3 {
 .gallery-item img {
   width: 100%;
   height: 100%;
+  background: #07111e;
   object-fit: cover;
   transition: transform 220ms ease;
 }
@@ -925,7 +934,7 @@ footer p {
   }
 
   .slider-control {
-    width: 42px;
+    width: 46px;
     height: 54px;
     font-size: 32px;
   }
@@ -948,10 +957,7 @@ footer p {
   }
 
   .floating-whatsapp {
-    right: 14px;
-    bottom: 86px;
-    width: 56px;
-    height: 56px;
+    display: none;
   }
 
   .mobile-contact-bar {

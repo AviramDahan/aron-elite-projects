@@ -24,6 +24,23 @@ const visibleGalleryItems = () =>
     (item) => activeGalleryFilter === "all" || item.dataset.category === activeGalleryFilter,
   );
 
+const loadGalleryImage = (item) => {
+  const image = item?.querySelector("img[data-src]");
+  if (!image) return;
+
+  image.src = image.dataset.src;
+  image.removeAttribute("data-src");
+};
+
+const preloadNearbyGalleryImages = (visibleItems) => {
+  if (!visibleItems.length) return;
+
+  [activeGalleryIndex, activeGalleryIndex + 1].forEach((index) => {
+    const wrappedIndex = (index + visibleItems.length) % visibleItems.length;
+    loadGalleryImage(visibleItems[wrappedIndex]);
+  });
+};
+
 const renderGallery = () => {
   const visibleItems = visibleGalleryItems();
 
@@ -42,6 +59,7 @@ const renderGallery = () => {
 
   if (activeGalleryIndex >= visibleItems.length) activeGalleryIndex = 0;
   if (activeGalleryIndex < 0) activeGalleryIndex = visibleItems.length - 1;
+  preloadNearbyGalleryImages(visibleItems);
 
   galleryItems.forEach((item) => {
     const isVisible = visibleItems.includes(item);
