@@ -61,7 +61,7 @@ video {
   z-index: 30;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 24px;
   padding: 14px clamp(18px, 4vw, 56px);
   background: rgba(245, 242, 236, 0.94);
@@ -69,36 +69,16 @@ video {
   backdrop-filter: blur(16px);
 }
 
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-}
-
-.brand {
-  width: clamp(116px, 18vw, 150px);
-  height: 72px;
-  flex: 0 0 auto;
-}
-
-.brand-logo {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .hero-logo-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: min(100%, 460px);
-  aspect-ratio: 830 / 460;
-  padding: 16px;
+  width: min(100%, 300px);
+  aspect-ratio: 2.2 / 1;
+  padding: 8px 14px;
   margin: 0 0 24px;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 4px;
   overflow: hidden;
 }
 
