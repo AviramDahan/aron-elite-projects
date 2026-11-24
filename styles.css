@@ -76,35 +76,11 @@ video {
   min-width: 0;
 }
 
-.brand-mark {
-  display: grid;
-  width: 44px;
-  height: 44px;
-  place-items: center;
-  flex: 0 0 auto;
-  color: var(--white);
-  background: var(--navy);
-  border-radius: 8px;
-  font-size: 28px;
-  font-weight: 900;
-}
-
-.brand strong,
-.brand small {
+.brand-logo {
   display: block;
-}
-
-.brand strong {
-  color: var(--navy);
-  font-size: clamp(16px, 2vw, 22px);
-  line-height: 1.1;
-}
-
-.brand small {
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  width: clamp(130px, 19vw, 180px);
+  height: auto;
+  flex: 0 0 auto;
 }
 
 .nav {
