@@ -76,7 +76,7 @@ video {
   width: min(100%, 300px);
   aspect-ratio: 2.2 / 1;
   padding: 8px 14px;
-  margin: 0 0 24px;
+  margin: 0 auto 24px;
   background: #fff;
   border-radius: 4px;
   overflow: hidden;
@@ -144,6 +144,12 @@ video {
   width: 100%;
   max-width: 860px;
   min-width: 0;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero-content .lead {
+  margin-inline: auto;
 }
 
 .hero .eyebrow {
@@ -200,6 +206,7 @@ h3 {
 
 .hero-actions {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 30px;
@@ -242,7 +249,7 @@ h3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   width: min(100%, 660px);
-  margin: clamp(30px, 5vw, 58px) 0 0;
+  margin: clamp(30px, 5vw, 58px) auto 0;
   background: rgba(255, 255, 255, 0.22);
 }
 
