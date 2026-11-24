@@ -76,11 +76,36 @@ video {
   min-width: 0;
 }
 
+.brand {
+  width: clamp(116px, 18vw, 150px);
+  height: 72px;
+  flex: 0 0 auto;
+}
+
 .brand-logo {
   display: block;
-  width: clamp(130px, 19vw, 180px);
-  height: auto;
-  flex: 0 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 460px);
+  aspect-ratio: 830 / 460;
+  padding: 16px;
+  margin: 0 0 24px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .nav {
